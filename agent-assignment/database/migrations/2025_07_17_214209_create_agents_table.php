@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('code_name')->unique();
             $table->boolean('active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
