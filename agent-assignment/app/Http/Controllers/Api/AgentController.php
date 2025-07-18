@@ -27,7 +27,29 @@ class AgentController extends Controller
         $agent = Agent::create($validated);
         return self::responseJSON($agent, "created", 201);
     }
+    
+        // $agents = Agent::all()->filter(fn($a) => $a->active);//filters data
 
+     
+        // $agents = Agent::where('active', true)->orderBy('name')->get();
+
+        // $agents = Agent::limit(10)->get();//result limiting
+
+      
+        // Agent::chunk(100, function ($agents) {
+        //     foreach ($agents as $agent) {
+        //        
+        //     }
+        // });
+
+   
+        // foreach (Agent::cursor() as $agent) {
+        //
+        // }
+         // $agent = Agent::firstOrCreate(
+        //     ['code_name' => $data['code_name']],
+        //     ['name' => $data['name'], 'active' => $data['active'] ?? true]
+        // );
        public function show($id)
     {
         $agent = Agent::find($id);
